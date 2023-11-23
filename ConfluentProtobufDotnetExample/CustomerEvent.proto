@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+package ConfluentProtobufDotnetExample;
+
+import "google/protobuf/timestamp.proto";
+
+message CustomerEvent {
+  int32 CustomerId = 1;
+  string EventName = 2;
+  string Data = 3;
+  .google.protobuf.Timestamp CreatedDate = 4;
+}
