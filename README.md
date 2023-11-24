@@ -111,8 +111,7 @@ Create a `consumer.properties` file from the `consumer.properties.sample` file t
 
 Run on Windows (replace the `--bootstrap-server`, `--property schema.registry.url=`, and `--topic` values by your actual values)
 ```
-docker run -it --rm -v ${PWD}:/home/appuser --entrypoint kafka-protobuf-console-consumer -e "SCHEMA_REGISTRY_LOG4J_OPTS=-Dlog4j.configuration=file:/home/appuser/l
-og4j.properties" confluentinc/cp-schema-registry --bootstrap-server pkc-312o0.ap-southeast-1.aws.confluent.cloud:9092 --property schema.registry.url=https://psrc-zy38d.ap-southeast-1.aws.confluent.cloud --consumer.config consumer.properties --formatter-config consumer.properties --topic sample-topic --timeout-ms 10000 --from-beginning
+docker run -it --rm -v ${PWD}:/home/appuser --entrypoint kafka-protobuf-console-consumer -e "SCHEMA_REGISTRY_LOG4J_OPTS=-Dlog4j.configuration=file:/home/appuser/log4j.properties" confluentinc/cp-schema-registry --bootstrap-server pkc-312o0.ap-southeast-1.aws.confluent.cloud:9092 --property schema.registry.url=https://psrc-zy38d.ap-southeast-1.aws.confluent.cloud --consumer.config consumer.properties --formatter-config consumer.properties --topic sample-topic --timeout-ms 10000 --from-beginning
 ```
 
 For Linux or Mac user, update the `-v` parameter to mount the current directory to `/home/appuser` when run Docker.
