@@ -8,6 +8,7 @@ using Google.Protobuf;
 IConfiguration configuration = new ConfigurationBuilder()
     .AddJsonFile("./appsettings.json")
     .AddUserSecrets(typeof(Program).Assembly)
+    .AddEnvironmentVariables()
     .Build();
     
 var producerConfig = configuration.GetSection("Producer").Get<ProducerConfig>().ThrowIfContainsNonUserConfigurable();
