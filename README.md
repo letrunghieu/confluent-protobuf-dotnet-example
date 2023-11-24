@@ -43,6 +43,7 @@ Whether you run the producer with or without Docker, the output will be ten mess
 
 ```text
 {
+  "CustomerId": 0,
   "EventName": "0",
   "Data": "0 data",
   "CreatedDate": "2023-11-24T02:46:19.920634900Z"
